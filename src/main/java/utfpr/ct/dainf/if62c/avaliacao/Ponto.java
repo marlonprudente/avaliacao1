@@ -2,7 +2,7 @@ package utfpr.ct.dainf.if62c.avaliacao;
 
 /**
  * Representa um ponto no plano.
- * @author Nome do Aluno <email@do.aluno>
+ * @author Marlon Mateus Prudente de Oliveira <marlonmateuspr@gmail.com>
  */
 public class Ponto {
     
@@ -17,12 +17,20 @@ public class Ponto {
      */
     public Ponto(double x, double y) {
         // TODO: inicialize as coordenadas do ponto
-    }
-    
+        this.x = x;
+        this.y = y;
+    }   
     // Implementar os seguintes métodos:
-    // getX()
-    // getY()
-    // setXY(double x, double y)
+     double getX(){        
+         return this.x;         
+     }
+    double getY(){
+        return this.y;
+    }
+     public void setXY(double x, double y){
+         this.x = x;
+         this.y = y;
+     }
     
     /**
      * Retorna uma representação textual do ponto no formato (x, y).
@@ -33,7 +41,8 @@ public class Ponto {
         // TODO: retona um String com as coordenadas do ponto no formato (x, y),
         // por exemplo, (1,11, 2,22) para um ponto com coordenadas x = 1.11 e
         // y = 2.22
-        throw new UnsupportedOperationException("Não implementado");
+        String coord = "(" + this.x + "   " + this.y + ").";
+        return coord;
     }
     
 }
