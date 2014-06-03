@@ -21,10 +21,10 @@ public class Ponto {
         this.y = y;
     }   
     // Implementar os seguintes métodos:
-     double getX(){        
+    public double getX(){        
          return this.x;         
      }
-    double getY(){
+   public double getY(){
         return this.y;
     }
      public void setXY(double x, double y){

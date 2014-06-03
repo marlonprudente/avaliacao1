@@ -47,7 +47,17 @@ public class Poligonal {
         }
             this.vertices[this.vertices.length - 1] = this.vertices[0];
     }
+    
+    public void setVertice(int i, Ponto x) {
+        
+        if (i > this.vertices.length || i < 0) {
 
+        } else {
+            this.vertices[i] = x;
+            
+        }
+            this.vertices[this.vertices.length - 1] = this.vertices[0];
+    }
     // setVertice(int i, Ponto vertice)
     public double getArea() {
         double soma = 0;
