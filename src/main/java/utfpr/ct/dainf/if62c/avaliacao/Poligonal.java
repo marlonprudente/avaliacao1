@@ -51,8 +51,8 @@ public class Poligonal {
     // setVertice(int i, Ponto vertice)
     public double getArea() {
         double soma = 0;
-        for (int i = 0; i < this.vertices.length; i++) {
-            soma = soma + Math.abs((this.vertices[i].getX() - this.vertices[i].getX() - 1) * (this.vertices[i].getY() + this.vertices[i].getY() - 1));
+        for (int i = 1; i < this.vertices.length; i++) {
+            soma = soma + Math.abs((this.vertices[i].getX() - this.vertices[i-1].getX()) * (this.vertices[i].getY() + this.vertices[i-1].getY()));
         }
         double area = 0.5 * soma;
         return area;
@@ -60,8 +60,8 @@ public class Poligonal {
 
     public double getPerimetro() {
         double perimetro = 0;
-        for (int i = 0; i < this.vertices.length; i++) {
-            perimetro = perimetro + Math.sqrt(Math.pow((this.vertices[i].getX() - this.vertices[i].getX() - 1), 2) + Math.pow((this.vertices[i].getY() - this.vertices[i].getY() - 1), 2));
+        for (int i = 1; i < this.vertices.length; i++) {
+            perimetro = perimetro + Math.sqrt(Math.pow((this.vertices[i].getX() - this.vertices[i-1].getX()), 2) + Math.pow((this.vertices[i].getY() - this.vertices[i-1].getY()), 2));
         }
 
         return perimetro;
