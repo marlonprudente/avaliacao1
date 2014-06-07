@@ -31,8 +31,9 @@ public class Poligonal {
     }
 
     // Implmentar os seguintes métodos:
-    Ponto getVertice(int i) {
-        return this.vertices[i];
+    public Ponto getVertice(int i) {
+        //return vertices[i];
+        return i < 0 || i >= vertices.length ? null : vertices[i];
     }
 
     public void setVertice(int i, double x, double y) {
@@ -62,9 +63,9 @@ public class Poligonal {
     public double getArea() {
         double soma = 0;
         for (int i = 1; i < this.vertices.length; i++) {
-            soma = soma + Math.abs((this.vertices[i].getX() - this.vertices[i-1].getX()) * (this.vertices[i].getY() + this.vertices[i-1].getY()));
+            soma = soma + (this.vertices[i].getX() - this.vertices[i-1].getX()) * (this.vertices[i].getY() + this.vertices[i-1].getY());
         }
-        double area = 0.5 * soma;
+        double area = 0.5 * Math.abs(soma);
         return area;
     }
 
